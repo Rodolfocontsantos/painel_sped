@@ -389,6 +389,7 @@ def get_stylesheet(theme):
             border: none;
             padding: 8px 12px;
             border-radius: 6px;
+            font-weight: 600;
         }}
         QPushButton:disabled {{
             background: #ffd2d2;
@@ -442,6 +443,7 @@ def get_stylesheet(theme):
             left: 10px;
             padding: 0 4px;
             color: {muted};
+            font-weight: 600;
         }}
         QCheckBox {{
             padding: 4px;
@@ -461,6 +463,7 @@ def get_stylesheet(theme):
             }
             QLabel {
                 color: #e5e7eb;
+                font-weight: 600;
             }
             """
             + base.format(
@@ -488,6 +491,7 @@ def get_stylesheet(theme):
         }
         QLabel {
             color: #262730;
+            font-weight: 600;
         }
         """
         + base.format(
