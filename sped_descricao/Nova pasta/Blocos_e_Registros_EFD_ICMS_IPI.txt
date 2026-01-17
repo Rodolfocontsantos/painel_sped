@@ -1,0 +1,80 @@
+
+### Bloco 0 – Abertura, Identificação e Referências
+
+✅ REGISTRO `0000` – Abertura do arquivo e identificação
+✅ REGISTRO `0001` – Abertura do Bloco 0
+✅ REGISTRO `0005` – Dados complementares
+✅ REGISTRO `0100` – Dados do contabilista
+✅ REGISTRO `0150` – Cadastro de participantes
+✅ REGISTRO `0200` – Cadastro de produtos
+✅ REGISTRO `0500` – Plano de contas contábeis
+✅ REGISTRO `0990` – Encerramento do bloco
+
+### Bloco C – Documentos Fiscais I – Mercadorias
+
+✅ REGISTRO `C100` – Cabeçalho da NF-e
+✅ REGISTRO `C170` – Itens da nota
+✅ REGISTRO `C190` – Totalização por CST/CFOP
+✅ REGISTRO `C300` – Resumo diário de vendas consumidor
+✅ REGISTRO `C400` – Equipamento ECF
+✅ REGISTRO `C500` – Nota de energia elétrica, gás, água
+✅ REGISTRO `C800` – Cupom fiscal eletrônico SAT/MFE
+✅ REGISTRO `C860` – Identificação do equipamento SAT
+✅ REGISTRO `C990` – Encerramento do bloco
+
+### Bloco D – Documentos Fiscais II – Serviços
+
+✅ REGISTRO `D100` – Conhecimento de transporte
+✅ REGISTRO `D500` – Serviços de comunicação e telecom
+✅ REGISTRO `D990` – Encerramento do bloco
+
+### Bloco E – Apuração do ICMS e do IPI
+
+✅ REGISTRO `E100` – Período da apuração
+✅ REGISTRO `E110` – Apuração do ICMS
+✅ REGISTRO `E210` – ICMS Substituição Tributária
+✅ REGISTRO `E310` – ICMS Diferencial de Alíquota
+✅ REGISTRO `E500` – Período do IPI
+✅ REGISTRO `E510` – Consolidação do IPI
+✅ REGISTRO `E520` – Apuração do IPI
+✅ REGISTRO `E530` – Ajustes do IPI
+✅ REGISTRO `E990` – Encerramento do bloco
+
+### Bloco G – CIAP (Crédito Ativo Permanente)
+
+✅ REGISTRO `G110` – Controle do crédito de ICMS do ativo permanente
+✅ REGISTRO `G125` – Movimentação do bem do ativo
+✅ REGISTRO `G990` – Encerramento do bloco
+
+### Bloco H – Inventário Físico
+
+✅ REGISTRO `H005` – Totais do inventário
+✅ REGISTRO `H010` – Itens inventariados
+✅ REGISTRO `H990` – Encerramento do bloco
+
+### Bloco K – Controle da Produção e do Estoque
+
+✅ REGISTRO `K200` – Estoque escriturado
+✅ REGISTRO `K230` – Itens produzidos
+✅ REGISTRO `K235` – Insumos consumidos
+✅ REGISTRO `K250` – Industrialização efetuada por terceiros
+✅ REGISTRO `K255` – Industrialização em terceiros
+✅ REGISTRO `K990` – Encerramento do bloco
+
+### Bloco 1 – Outras Informações
+
+✅ REGISTRO `1100` – Exportações
+✅ REGISTRO `1200` – Créditos fiscais - ICMS
+✅ REGISTRO `1300` – Movimentação de combustíveis
+✅ REGISTRO `1500` – Energia elétrica em operações interestaduais
+✅ REGISTRO `1600` – Total operações com cartão de crédito/débito
+✅ REGISTRO `1700` – Documentos fiscais utilizados
+✅ REGISTRO `1900` – Indicador de sub-apuração do ICMS
+✅ REGISTRO `1990` – Encerramento do bloco
+
+### Bloco 9 – Controle e Encerramento do Arquivo
+
+✅ REGISTRO `9001` – Abertura do bloco
+✅ REGISTRO `9900` – Totalização de registros
+✅ REGISTRO `9990` – Encerramento do bloco
+✅ REGISTRO `9999` – Encerramento do arquivo

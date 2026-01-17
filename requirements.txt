@@ -1,0 +1,8 @@
+streamlit
+pandas
+XlsxWriter
+openpyxl
+PySide6
+nuitka
+cython
+python-minifier

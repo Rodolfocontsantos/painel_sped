@@ -1,0 +1,278 @@
+Registro,Campo,Descricao,Tamanho,Posicao_Inicial,Posicao_Final,Formato
+10,01,"Tipo",2,1,2,N
+10,02,"CGC/MF do estabelecimento informante",14,3,16,N
+10,03,"Inscricao Estadual do informante",14,17,30,X
+10,04,"Nome do contribuinte",35,31,65,X
+10,05,"Municipio",30,66,95,X
+10,06,"UF",2,96,97,X
+10,07,"Fax",10,98,107,N
+10,08,"Data inicial do periodo (AAAAMMDD)",8,108,115,N
+10,09,"Data final do periodo (AAAAMMDD)",8,116,123,N
+10,10,"Codigo identificacao da estrutura do arquivo",1,124,124,X
+10,11,"Codigo natureza das operacoes informadas",1,125,125,X
+10,12,"Codigo da finalidade do arquivo",1,126,126,X
+11,01,"Tipo",2,1,2,N
+11,02,"Logradouro",34,3,36,X
+11,03,"Numero",5,37,41,N
+11,04,"Complemento",22,42,63,X
+11,05,"Bairro",15,64,78,X
+11,06,"CEP",8,79,86,N
+11,07,"Nome do contato",28,87,114,X
+11,08,"Telefone",12,115,126,N
+50,01,"Tipo",2,1,2,N
+50,02,"CNPJ remetente/emitente ou destinatario",14,3,16,N
+50,03,"Inscricao Estadual remetente/emitente ou destinatario",14,17,30,X
+50,04,"Data de emissao ou recebimento (AAAAMMDD)",8,31,38,N
+50,05,"UF remetente/destinatario",2,39,40,X
+50,06,"Modelo",2,41,42,N
+50,07,"Serie",3,43,45,X
+50,08,"Numero da nota fiscal",6,46,51,N
+50,09,"CFOP",4,52,55,N
+50,10,"Emitente (P/T)",1,56,56,X
+50,11,"Valor total (2 decimais)",13,57,69,N
+50,12,"Base de calculo do ICMS (2 decimais)",13,70,82,N
+50,13,"Valor do ICMS (2 decimais)",13,83,95,N
+50,14,"Valor isento ou nao tributado (2 decimais)",13,96,108,N
+50,15,"Outras (2 decimais)",13,109,121,N
+50,16,"Aliquota do ICMS (2 decimais)",4,122,125,N
+50,17,"Situacao da nota fiscal",1,126,126,X
+51,01,"Tipo",2,1,2,N
+51,02,"CNPJ remetente/emitente ou destinatario",14,3,16,N
+51,03,"Inscricao Estadual remetente/emitente ou destinatario",14,17,30,X
+51,04,"Data de emissao ou recebimento (AAAAMMDD)",8,31,38,N
+51,05,"UF remetente/destinatario",2,39,40,X
+51,06,"Serie",3,41,43,X
+51,07,"Numero da nota fiscal",6,44,49,N
+51,08,"CFOP",4,50,53,N
+51,09,"Valor total (2 decimais)",13,54,66,N
+51,10,"Valor do IPI (2 decimais)",13,67,79,N
+51,11,"Isenta ou nao tributada - IPI (2 decimais)",13,80,92,N
+51,12,"Outras - IPI (2 decimais)",13,93,105,N
+51,13,"Brancos",20,106,125,X
+51,14,"Situacao da nota fiscal",1,126,126,X
+53,01,"Tipo",2,1,2,N
+53,02,"CNPJ do contribuinte substituido",14,3,16,N
+53,03,"Inscricao Estadual do contribuinte substituido",14,17,30,X
+53,04,"Data de emissao ou recebimento (AAAAMMDD)",8,31,38,N
+53,05,"UF do contribuinte substituido",2,39,40,X
+53,06,"Modelo",2,41,42,N
+53,07,"Serie",3,43,45,X
+53,08,"Numero da nota fiscal",6,46,51,N
+53,09,"CFOP",4,52,55,N
+53,10,"Emitente (P/T)",1,56,56,X
+53,11,"Base de calculo do ICMS ST (2 decimais)",13,57,69,N
+53,12,"ICMS retido (2 decimais)",13,70,82,N
+53,13,"Despesas acessorias (2 decimais)",13,83,95,N
+53,14,"Situacao da nota fiscal",1,96,96,X
+53,15,"Brancos",30,97,126,X
+54,01,"Tipo",2,1,2,N
+54,02,"CNPJ remetente/emitente ou destinatario",14,3,16,N
+54,03,"Modelo",2,17,18,N
+54,04,"Serie",3,19,21,X
+54,05,"Numero da nota fiscal",6,22,27,N
+54,06,"CFOP",4,28,31,N
+54,07,"CST",3,32,34,N
+54,08,"Numero do item",3,35,37,N
+54,09,"Codigo do produto ou servico",14,38,51,X
+54,10,"Quantidade (3 decimais)",11,52,62,N
+54,11,"Valor do produto (2 decimais)",12,63,74,N
+54,12,"Valor do desconto/despesa acessoria (2 decimais)",12,75,86,N
+54,13,"Base de calculo do ICMS (2 decimais)",12,87,98,N
+54,14,"Base de calculo do ICMS ST (2 decimais)",12,99,110,N
+54,15,"Valor do IPI (2 decimais)",12,111,122,N
+54,16,"Aliquota do ICMS (2 decimais)",4,123,126,N
+55,01,"Tipo",2,1,2,N
+55,02,"CNPJ do substituto tributario",14,3,16,N
+55,03,"Inscricao Estadual do substituto (UF destinataria)",14,17,30,X
+55,04,"Data da GNRE (AAAAMMDD)",8,31,38,N
+55,05,"UF do substituto",2,39,40,X
+55,06,"UF favorecida",2,41,42,X
+55,07,"Banco GNRE",3,43,45,N
+55,08,"Agencia GNRE",4,46,49,N
+55,09,"Numero GNRE (autenticacao bancaria)",20,50,69,X
+55,10,"Valor GNRE (2 decimais)",13,70,82,N
+55,11,"Data de vencimento do ICMS substituido (AAAAMMDD)",8,83,90,N
+55,12,"Mes e ano de referencia (MMAAAA)",6,91,96,N
+55,13,"Numero do convenio/protocolo/mercadoria",30,97,126,X
+56,01,"Tipo",2,1,2,N
+56,02,"CNPJ/CPF do adquirente",14,3,16,N
+56,03,"Modelo",2,17,18,N
+56,04,"Serie",3,19,21,X
+56,05,"Numero da nota fiscal",6,22,27,N
+56,06,"CFOP",4,28,31,N
+56,07,"CST",3,32,34,N
+56,08,"Numero do item",3,35,37,N
+56,09,"Codigo do produto ou servico",14,38,51,X
+56,10,"Tipo de operacao (1=concessionaria;2=faturamento direto;3= venda direta)",1,52,52,N
+56,11,"CNPJ da concessionaria",14,53,66,N
+56,12,"Aliquota do IPI (2 decimais)",4,67,70,N
+56,13,"Chassi",17,71,87,X
+56,14,"Brancos",39,88,126,X
+60M,01,"Tipo",2,1,2,N
+60M,02,"Subtipo (M)",1,3,3,X
+60M,03,"Data de emissao (AAAAMMDD)",8,4,11,N
+60M,04,"Numero de serie de fabricacao do equipamento",20,12,31,X
+60M,05,"Numero de ordem sequencial do equipamento",3,32,34,N
+60M,06,"Modelo do documento fiscal",2,35,36,X
+60M,07,"Numero COO inicial do dia",6,37,42,N
+60M,08,"Numero COO final do dia",6,43,48,N
+60M,09,"Numero do contador de reducao Z (CRZ)",6,49,54,N
+60M,10,"Contador de reinicio de operacao (CRO)",3,55,57,N
+60M,11,"Valor da venda bruta (acumulado)",16,58,73,N
+60M,12,"Valor do totalizador geral do equipamento",16,74,89,N
+60M,13,"Brancos",37,90,126,X
+60A,01,"Tipo",2,1,2,N
+60A,02,"Subtipo (A)",1,3,3,X
+60A,03,"Data de emissao (AAAAMMDD)",8,4,11,N
+60A,04,"Numero de serie de fabricacao do equipamento",20,12,31,X
+60A,05,"Situacao tributaria/aliquota",4,32,35,X
+60A,06,"Valor acumulado no totalizador parcial (2 decimais)",12,36,47,N
+60A,07,"Brancos",79,48,126,X
+60D,01,"Tipo",2,1,2,N
+60D,02,"Subtipo (D)",1,3,3,X
+60D,03,"Data de emissao (AAAAMMDD)",8,4,11,N
+60D,04,"Numero de serie de fabricacao do equipamento",20,12,31,X
+60D,05,"Codigo da mercadoria/produto ou servico",14,32,45,X
+60D,06,"Quantidade (3 decimais)",13,46,58,N
+60D,07,"Valor da mercadoria/produto ou servico (2 decimais)",16,59,74,N
+60D,08,"Base de calculo do ICMS (2 decimais)",16,75,90,N
+60D,09,"Situacao tributaria/aliquota",4,91,94,X
+60D,10,"Valor do ICMS (2 decimais)",13,95,107,N
+60D,11,"Brancos",19,108,126,X
+60I,01,"Tipo",2,1,2,N
+60I,02,"Subtipo (I)",1,3,3,X
+60I,03,"Data de emissao (AAAAMMDD)",8,4,11,N
+60I,04,"Numero de serie de fabricacao do equipamento",20,12,31,X
+60I,05,"Modelo do documento fiscal",2,32,33,X
+60I,06,"Numero do COO",6,34,39,N
+60I,07,"Numero do item",3,40,42,N
+60I,08,"Codigo da mercadoria/produto ou servico",14,43,56,X
+60I,09,"Quantidade (3 decimais)",13,57,69,N
+60I,10,"Valor unitario da mercadoria/produto (3 decimais)",13,70,82,N
+60I,11,"Base de calculo do ICMS do item (2 decimais)",12,83,94,N
+60I,12,"Situacao tributaria/aliquota",4,95,98,X
+60I,13,"Valor do ICMS (2 decimais)",12,99,110,N
+60I,14,"Brancos",16,111,126,X
+60R,01,"Tipo",2,1,2,N
+60R,02,"Subtipo (R)",1,3,3,X
+60R,03,"Mes e ano de emissao (MMAAAA)",6,4,9,N
+60R,04,"Codigo da mercadoria/produto ou servico",14,10,23,X
+60R,05,"Quantidade no mes (3 decimais)",13,24,36,N
+60R,06,"Valor da mercadoria/produto ou servico no mes (2 decimais)",16,37,52,N
+60R,07,"Base de calculo do ICMS no mes (2 decimais)",16,53,68,N
+60R,08,"Situacao tributaria/aliquota",4,69,72,X
+60R,09,"Brancos",54,73,126,X
+61,01,"Tipo",2,1,2,N
+61,02,"Brancos",14,3,16,X
+61,03,"Brancos",14,17,30,X
+61,04,"Data de emissao (AAAAMMDD)",8,31,38,N
+61,05,"Modelo",2,39,40,N
+61,06,"Serie",3,41,43,X
+61,07,"Subserie",2,44,45,X
+61,08,"Numero inicial",6,46,51,N
+61,09,"Numero final",6,52,57,N
+61,10,"Valor total / movimento diario (2 decimais)",13,58,70,N
+61,11,"Base de calculo do ICMS (2 decimais)",13,71,83,N
+61,12,"Valor do ICMS (2 decimais)",12,84,95,N
+61,13,"Isenta ou nao tributada (2 decimais)",13,96,108,N
+61,14,"Outras (2 decimais)",13,109,121,N
+61,15,"Aliquota do ICMS (2 decimais)",4,122,125,N
+61,16,"Branco",1,126,126,X
+70,01,"Tipo",2,1,2,N
+70,02,"CNPJ do emitente/tomador conforme caso",14,3,16,N
+70,03,"Inscricao Estadual do emitente/tomador conforme caso",14,17,30,X
+70,04,"Data de emissao/utilizacao (AAAAMMDD)",8,31,38,N
+70,05,"UF do emitente/tomador",2,39,40,X
+70,06,"Modelo do documento",2,41,42,N
+70,07,"Serie",1,43,43,X
+70,08,"Subserie",2,44,45,X
+70,09,"Numero do documento",6,46,51,N
+70,10,"CFOP (um registro por CFOP)",4,52,55,N
+70,11,"Valor total do documento (2 decimais)",13,56,68,N
+70,12,"Base de calculo do ICMS (2 decimais)",14,69,82,N
+70,13,"Valor do ICMS (2 decimais)",14,83,96,N
+70,14,"Isenta ou nao tributada (2 decimais)",14,97,110,N
+70,15,"Outras (2 decimais)",14,111,124,N
+70,16,"Modalidade do frete (1=CIF;2=FOB)",1,125,125,N
+70,17,"Situacao do documento",1,126,126,X
+71,01,"Tipo",2,1,2,N
+71,02,"CNPJ do tomador",14,3,16,N
+71,03,"Inscricao Estadual do tomador",14,17,30,X
+71,04,"Data de emissao do conhecimento (AAAAMMDD)",8,31,38,N
+71,05,"UF do tomador",2,39,40,X
+71,06,"Modelo do conhecimento",2,41,42,X
+71,07,"Serie",1,43,43,X
+71,08,"Subserie",2,44,45,X
+71,09,"Numero do conhecimento",6,46,51,N
+71,10,"UF do remetente ou destinatario (conforme tomador)",2,52,53,X
+71,11,"CNPJ do remetente ou destinatario (conforme tomador)",14,54,67,N
+71,12,"Inscricao Estadual do remetente ou destinatario",14,68,81,X
+71,13,"Data de emissao da nota fiscal que acoberta a carga (AAAAMMDD)",8,82,89,N
+71,14,"Modelo da nota fiscal que acoberta a carga",2,90,91,X
+71,15,"Serie da nota fiscal que acoberta a carga",3,92,94,X
+71,16,"Numero da nota fiscal que acoberta a carga",6,95,100,N
+71,17,"Valor total da nota fiscal que acoberta a carga (2 decimais)",14,101,114,N
+71,18,"Brancos",12,115,126,X
+74,01,"Tipo",2,1,2,N
+74,02,"Data do inventario (AAAAMMDD)",8,3,10,N
+74,03,"Codigo do produto",14,11,24,X
+74,04,"Quantidade (3 decimais)",13,25,37,N
+74,05,"Valor do produto (2 decimais)",13,38,50,N
+74,06,"Codigo de posse das mercadorias inventariadas",1,51,51,X
+74,07,"CNPJ do possuidor/proprietario",14,52,65,N
+74,08,"Inscricao Estadual do possuidor/proprietario",14,66,79,X
+74,09,"UF do possuidor/proprietario",2,80,81,X
+74,10,"Brancos",45,82,126,X
+75,01,"Tipo",2,1,2,N
+75,02,"Data inicial de validade (AAAAMMDD)",8,3,10,N
+75,03,"Data final de validade (AAAAMMDD)",8,11,18,N
+75,04,"Codigo do produto ou servico",14,19,31,X
+75,05,"Codigo NCM",8,33,40,X
+75,06,"Descricao do produto ou servico",53,41,93,X
+75,07,"Unidade de medida de comercializacao",6,94,99,X
+75,08,"Situacao tributaria preponderante",3,100,102,N
+75,09,"Aliquota do IPI (2 decimais)",4,103,106,N
+75,10,"Aliquota do ICMS (2 decimais)",4,107,110,N
+75,11,"Reducao da base de calculo do ICMS (%)",4,111,114,N
+75,12,"Base de calculo do ICMS ST (2 decimais)",12,115,126,N
+76,01,"Tipo",2,1,2,N
+76,02,"CNPJ/CPF do tomador",14,3,16,N
+76,03,"Inscricao Estadual do tomador",14,17,30,X
+76,04,"Modelo",2,31,32,N
+76,05,"Serie",2,33,34,X
+76,06,"Subserie",2,35,36,X
+76,07,"Numero da nota fiscal",10,37,46,N
+76,08,"CFOP",4,47,50,N
+76,09,"Tipo de receita",1,51,51,N
+76,10,"Data de emissao/recebimento (AAAAMMDD)",8,52,59,N
+76,11,"UF remetente/destinatario",2,60,61,X
+76,12,"Valor total (2 decimais)",13,62,74,N
+76,13,"Base de calculo do ICMS (2 decimais)",13,75,87,N
+76,14,"Valor do ICMS (2 decimais)",12,88,99,N
+76,15,"Isenta ou nao tributada (2 decimais)",12,100,111,N
+76,16,"Outras (2 decimais)",12,112,123,N
+76,17,"Aliquota do ICMS (valor inteiro)",2,124,125,N
+76,18,"Situacao da nota fiscal",1,126,126,X
+77,01,"Tipo",2,1,2,N
+77,02,"CNPJ/CPF do tomador",14,3,16,N
+77,03,"Modelo",2,17,18,N
+77,04,"Serie",2,19,20,X
+77,05,"Subserie",2,21,22,X
+77,06,"Numero da nota fiscal",10,23,32,N
+77,07,"CFOP",4,33,36,N
+77,08,"Tipo de receita",1,37,37,N
+77,09,"Numero do item",3,38,40,N
+77,10,"Codigo do servico",11,41,51,X
+77,11,"Quantidade (3 decimais)",13,52,64,N
+77,12,"Valor do servico (2 decimais)",12,65,76,N
+77,13,"Valor do desconto/despesa acessoria (2 decimais)",12,77,88,N
+77,14,"Base de calculo do ICMS (2 decimais)",12,89,100,N
+77,15,"Aliquota do ICMS (valor inteiro)",2,101,102,N
+77,16,"CNPJ da operadora de destino",14,103,116,N
+77,17,"Codigo/numero do terminal do usuario final",10,117,126,N
+90,01,"Tipo",2,1,2,N
+90,02,"CGC/MF do informante",14,3,16,N
+90,03,"Inscricao Estadual do informante",14,17,30,X
+90,04,"Tipo a ser totalizado (primeira ocorrencia; pares 04/05 podem repetir ate a posicao 125)",2,31,32,N
+90,05,"Total de registros do tipo informado no campo anterior (primeira ocorrencia)",8,33,40,N
+90,06,"Numero de registros tipo 90 (campo fixo na posicao 126)",1,126,126,N
