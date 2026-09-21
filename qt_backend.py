@@ -275,5 +275,8 @@ def apply_field_change(corpo_sped, registro, indice_campo, novo_valor, indices_p
 
 
 def build_full_content(corpo_sped, assinatura):
-    """Return the full file content as a single string."""
-    return "\n".join(corpo_sped + assinatura)
+    """Serializa o SPED com CRLF e terminador após a última linha."""
+    linhas = corpo_sped + assinatura
+    if not linhas:
+        return ""
+    return "\r\n".join(linhas) + "\r\n"

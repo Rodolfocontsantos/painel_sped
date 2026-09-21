@@ -1,6 +1,8 @@
 import streamlit as st
 import os # Pode ser útil para futuras funções de utilidade
 
+from qt_backend import build_full_content
+
 def ler_e_separar_sped(uploaded_file):
     """Lê o arquivo SPED, separa o corpo da assinatura e retorna ambos."""
     try:
@@ -44,7 +46,7 @@ def baixar_arquivo(corpo_sped, assinatura, nome_arquivo="sped_processado.txt"):
         st.warning("Não há dados para baixar.")
         return
 
-    novo_conteudo = "\n".join(corpo_sped + assinatura)
+    novo_conteudo = build_full_content(corpo_sped, assinatura)
     st.download_button(
         label="💾 Baixar Arquivo Processado",
         data=novo_conteudo.encode("latin-1"),
@@ -106,4 +108,4 @@ def load_sped_layout(file_path="sped_descricao/sped_descritivo.txt"):
         return None
     except Exception as e:
         st.error(f"Erro ao ler o arquivo descritivo do layout SPED ({file_path}): {e}")
-        return None 
+        return None

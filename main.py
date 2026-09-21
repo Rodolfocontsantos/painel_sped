@@ -1,5 +1,7 @@
-import streamlit as st
+import hashlib
+
 import pandas as pd
+import streamlit as st
 
 # Importar funções dos módulos
 from utils import ler_e_separar_sped, baixar_arquivo
@@ -7,6 +9,12 @@ from modules.visualizar import display_file_content
 from modules.alterar import handle_field_modification
 from modules.resumo import generate_summary
 from modules.converter import convert_to_spreadsheet
+from modules.remover_registros import (
+    render_c101_removal,
+    render_completed_action_dialog,
+    render_duplicate_removal,
+)
+from services.sped_cleanup import analyze_0200_duplicates
 
 st.set_page_config(page_title="Painel SPED", layout="wide")
 st.title("🧾 Painel de Manipulação de Arquivo SPED")
@@ -16,10 +24,15 @@ uploaded_file = st.file_uploader("📂 Envie seu arquivo SPED (.txt)", type=["tx
 
 if uploaded_file is not None:
     # Usar st.session_state para manter os dados entre interações
-    # Recarregar apenas se o nome do arquivo mudar
-    if 'uploaded_filename' not in st.session_state or st.session_state.uploaded_filename != uploaded_file.name:
+    # O hash evita reutilizar o estado ao carregar outro conteúdo com o mesmo nome.
+    uploaded_file_hash = hashlib.sha256(uploaded_file.getvalue()).hexdigest()
+    if st.session_state.get('uploaded_file_hash') != uploaded_file_hash:
+        for key in list(st.session_state.keys()):
+            del st.session_state[key]
+        uploaded_file.seek(0)
         st.session_state.corpo_sped, st.session_state.assinatura = ler_e_separar_sped(uploaded_file)
         st.session_state.uploaded_filename = uploaded_file.name
+        st.session_state.uploaded_file_hash = uploaded_file_hash
         # Mostrar mensagem sobre assinatura após a leitura inicial
         if st.session_state.assinatura is not None:
             if st.session_state.assinatura:
@@ -34,7 +47,9 @@ if uploaded_file is not None:
             "Visualizar Arquivo",
             "Alterar Campos",
             "Gerar Resumo",
-            "Converter para Excel/CSV"
+            "Converter para Excel/CSV",
+            "Remover duplicados",
+            "Remover DIFAL",
         ]
         acao_selecionada = st.sidebar.radio(
             "Escolha o que deseja fazer:",
@@ -65,6 +80,24 @@ if uploaded_file is not None:
             elif acao_selecionada == "Converter para Excel/CSV":
                 convert_to_spreadsheet(st.session_state.corpo_sped, st.session_state.assinatura)
 
+            elif acao_selecionada == "Remover duplicados":
+                render_duplicate_removal(st.session_state.corpo_sped)
+
+            elif acao_selecionada == "Remover DIFAL":
+                render_c101_removal(st.session_state.corpo_sped)
+
+        duplicate_analysis = analyze_0200_duplicates(st.session_state.corpo_sped)
+        if duplicate_analysis.duplicate_count:
+            st.sidebar.warning(
+                f"O arquivo contém {duplicate_analysis.duplicate_count} duplicados no registro 0200."
+            )
+            if duplicate_analysis.protected_group_count:
+                st.sidebar.caption(
+                    f"{duplicate_analysis.protected_group_count} grupos exigem revisão manual."
+                )
+
+        render_completed_action_dialog()
+
         # --- Download do Arquivo Atual (sempre disponível na sidebar) ---
         st.sidebar.markdown("---")
         st.sidebar.markdown("**Arquivo Atual na Sessão:**")
@@ -87,6 +120,4 @@ else:
         for key in list(st.session_state.keys()):
             del st.session_state[key]
     else:
-         st.info("Envie um arquivo SPED .txt para iniciar.") 
-
-         
+        st.info("Envie um arquivo SPED .txt para iniciar.")
