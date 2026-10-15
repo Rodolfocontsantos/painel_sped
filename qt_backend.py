@@ -1,5 +1,8 @@
-import pandas as pd
+import sys
 from io import BytesIO
+from pathlib import Path
+
+import pandas as pd
 
 
 def read_sped_file(file_path):
@@ -33,10 +36,20 @@ def _split_body_signature(linhas):
     return corpo_sped, assinatura
 
 
+def _resolve_data_path(rel_path):
+    base = Path(__file__).resolve().parent
+    if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
+        base = Path(sys._MEIPASS)
+    return (base / rel_path).resolve()
+
+
 def load_sped_layout(file_path="sped_descricao/sped_descritivo.txt"):
     """Load SPED layout into {REGISTRO: {CAMPO: index_base_1}}."""
     layout = {}
-    with open(file_path, "r", encoding="utf-8") as f:
+    path = Path(file_path)
+    if not path.is_absolute():
+        path = _resolve_data_path(file_path)
+    with open(path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if not line or not line.startswith("|"):
